@@ -15,10 +15,7 @@ public class SlmPruefungApplication {
     @RequestMapping(value ={"/digitSum"})
     public int digitSum(@RequestParam int a) {
         int sum = 0;
-        int count = 0;
-        count++;
-        int countSum=count;
-        countDigitSum(count);
+        countDigitSum();
         while (a > 0) {
             sum += a % 10;
             a = a /  10;
@@ -27,8 +24,8 @@ public class SlmPruefungApplication {
 
     }
     @RequestMapping(value = "/count")
-    public int countDigitSum(int a){
-        int count = a;
+    public int countDigitSum(){
+        int count = 0;
         count++;
         return count;
     }
