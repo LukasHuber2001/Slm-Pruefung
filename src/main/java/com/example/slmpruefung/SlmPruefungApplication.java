@@ -14,8 +14,7 @@ public class SlmPruefungApplication {
     }
 
     @RequestMapping("/slmPruefungApplication")
-    @RequestParam(int a)
-    public int digitSum(int a) {
+    public int digitSum(@RequestParam int a) {
         int sum = 0;
         while (a > 0) {
             sum += a % 10;
